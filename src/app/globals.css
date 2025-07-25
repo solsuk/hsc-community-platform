@@ -1,0 +1,576 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom extra small text for badges */
+.text-xxs {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #D6D1CA;
+  --text-color: #333333;
+  --tile-sell: #22c55e;
+  --tile-trade: #eab308;
+  --tile-announce: #3b82f6;
+  --tile-wanted: #8B5CF6;
+  --border-radius: 16px;
+  --tile-gap: 1rem;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Layout styles */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: var(--tile-gap);
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  margin-right: var(--tile-gap);
+  overflow: visible;
+}
+
+/* Make the logo tile exactly like a listing tile */
+.logo-tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: none;
+  background-color: #EAE8E4;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-tile-top {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Remove unused logo styles */
+.logo-tile-image,
+.logo-tile-content,
+.logo-text,
+.logo-tile-middle,
+.logo-tile-bottom {
+  display: none;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.user-email {
+  font-size: 0.875rem;
+  color: #444;
+  font-weight: 400;
+}
+
+.generate-key {
+  font-size: 0.75rem;
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.generate-key:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  display: none;
+}
+
+.post-button::after {
+  display: none;
+}
+
+.post-button-container {
+  position: relative;
+  margin-left: var(--tile-gap);
+  margin-right: auto;
+}
+
+.post-button {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  border: none;
+  border-radius: var(--border-radius);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-top: auto;
+  transition: all 0.2s ease;
+}
+
+.post-dropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 50px;
+  background-color: #EAE8E4;
+  overflow: hidden;
+  z-index: 10;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+.post-dropdown.show,
+.post-tile:hover .post-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.post-dropdown-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  min-height: 40px;
+}
+
+.post-dropdown-item:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.post-dropdown-item:hover {
+  transform: scale(1.02);
+}
+
+.post-sell:before {
+  background-color: var(--tile-sell);
+}
+
+.post-trade:before {
+  background-color: var(--tile-trade);
+}
+
+.post-announce:before {
+  background-color: var(--tile-announce);
+}
+
+.post-wanted:before {
+  background-color: var(--tile-wanted);
+}
+
+.post-letter {
+  transition: transform 0.2s;
+  color: white;
+}
+
+.post-button:hover .post-letter {
+  transform: translateY(-1px);
+}
+
+/* POST! tile styles - same as logo tile */
+.post-tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: #EAE8E4;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.search-input {
+  margin-left: 0;
+  margin-right: var(--tile-gap);
+  padding: 0.5rem 0.75rem;
+  width: 256px;
+  background-color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Clean retro chat logo styling */
+.chat-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  background: #f8f9fa;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  padding: 8px 12px;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+input[type="text"]::placeholder {
+  color: #4a4a4a;
+  opacity: 0.8;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3498db;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+input[type="text"]:focus::placeholder {
+  opacity: 0.5;
+}
+
+/* Tile Grid styles */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--tile-gap);
+  auto-rows: 1fr;
+}
+
+/* Responsive grid with stretch-and-snap behavior like nomads.com */
+@media (min-width: 640px) {
+  .tile-grid {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .tile-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .logo-container {
+    width: calc((100% - 2 * var(--tile-gap)) / 3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tile-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .logo-container {
+    width: calc((100% - 3 * var(--tile-gap)) / 4);
+  }
+}
+
+@media (min-width: 1280px) {
+  .tile-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  
+  .logo-container {
+    width: calc((100% - 4 * var(--tile-gap)) / 5);
+  }
+}
+
+@media (min-width: 1536px) {
+  .tile-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* Enhanced glass tiles - now using demo-style structure */
+.glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Private tile styling */
+.private-tile {
+  cursor: not-allowed;
+  position: relative;
+}
+
+/* Tooltip styles */
+.tooltip-container {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  display: none;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  transform: translate(8px, -50%);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(4px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(8px, -50%);
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+/* Message timestamp feature */
+.user-message::after,
+.bot-message::after {
+  content: attr(data-time);
+  display: none;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.user-message:hover::after,
+.bot-message:hover::after {
+  display: block;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  align-self: flex-start;
+  background-color: #eae8e4;
+  color: #6b7280;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0.25rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  animation: messageAppear 0.3s ease forwards;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.typing-dots {
+  display: inline-block;
+  margin-left: 4px;
+  width: 20px;
+}
+
+@keyframes typingDots {
+  0%, 20% { content: '.'; }
+  30%, 40% { content: '..'; }
+  50%, 70% { content: '...'; }
+  80%, 90% { content: '..'; }
+  100% { content: '.'; }
+}
+
+.typing-dots::after {
+  content: '';
+  animation: typingDots 1.5s infinite;
+}
+
+/* Empty state for chat */
+.help-results:empty::before {
+  content: "Ask me a question about Hillsmere Shores Classifieds";
+  display: block;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  opacity: 0.7;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 1rem;
+}
+
+/* Remove unused styles */
+.help-input-wrapper,
+.help-input-hidden,
+.results-placeholder {
+  display: none;
+}
+
+/* Hide old search input */
+.search-input {
+  display: none;
+}
+
+/* Help/ChatBot tile styles */
+
+.help-tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: #EAE8E4;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.help-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.help-results {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(101%);
+  transition: all 0.3s ease;
+}
+
+.help-results.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.help-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background-color: white;
+  border-radius: 0 0 var(--border-radius) 5px;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+}
+
+.clear-chat-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.help-content.has-active-results .clear-chat-btn {
+  opacity: 1;
+}
+
+.clear-chat-btn:hover {
+  color: #333;
+}
+
+/* Subtle green glow animation for Get Key button */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.5), 0 0 25px rgba(34, 197, 94, 0.2);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}

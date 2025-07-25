@@ -1,0 +1,30 @@
+# HSC Authentication Environment Variables
+
+# Database Configuration
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key_here
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key_here
+
+# Authentication
+JWT_SECRET=your_jwt_secret_here_32_characters_min
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# Email Service
+RESEND_API_KEY=re_your_resend_api_key_here
+
+# AI Chatbot - Multiple Options
+XAI_API_KEY=xai-your_x_ai_api_key_here
+OPENAI_API_KEY=your-openai-api-key-here
+# Get Grok key at: https://console.x.ai/
+# Get OpenAI key at: https://platform.openai.com/api-keys
+
+# Payment Processing (Stripe)
+STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key_here
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key_here
+STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_here
+# Get keys at: https://dashboard.stripe.com/apikeys
+
+# IP Geofencing Configuration
+COMMUNITY_IP_RANGE=192.168.1.0/24
+# Example: Set to your actual community IP range
+# Multiple ranges can be comma-separated: 192.168.1.0/24,10.0.0.0/16 

@@ -1,0 +1,62 @@
+{
+  "title": "The Sea Breeze Newsletter & Community Communications",
+  "last_updated": "2025-01-19",
+  "newsletter": {
+    "name": "The Sea Breeze",
+    "description": "Official community newsletter for Hillsmere Shores residents",
+    "availability": "Available online at hillsmereshores.org",
+    "frequency": "Regular publication schedule",
+    "content": [
+      "HSIA activities and updates",
+      "Community news and announcements", 
+      "Important community matters",
+      "Event information",
+      "Board meeting updates"
+    ]
+  },
+  "communication_channels": {
+    "website": {
+      "url": "https://hillsmereshores.org",
+      "description": "Official HSIA website with news, events, and resources"
+    },
+    "facebook": {
+      "page_name": "Hillsmere Shores Improvement Association",
+      "description": "Official Facebook page for event notifications and meetings only",
+      "note": "Not monitored for responses - one-way communication only",
+      "disclaimer": "HSIA does not sponsor other social media platforms"
+    },
+    "email_list": {
+      "description": "HSIA email list for important events and issues",
+      "membership_required": false,
+      "open_to": "Any resident, property owner, or interested party in Hillsmere Shores",
+      "signup": "Available on hillsmereshores.org"
+    }
+  },
+  "meeting_information": {
+    "board_meetings": {
+      "frequency": "Monthly HSIA Board Meetings",
+      "time": "7:00 PM - 9:00 PM",
+      "location": "Check HSIA website for current location",
+      "upcoming_dates": "Listed on community calendar"
+    },
+    "general_membership": {
+      "frequency": "Annual General Membership Meeting",
+      "typical_month": "September",
+      "time": "6:45 PM - 9:00 PM", 
+      "description": "Community-wide meeting for all residents"
+    },
+    "committee_meetings": [
+      "Beach Committee Meeting",
+      "Piers & Harbors Committee Meeting"
+    ]
+  },
+  "community_updates": {
+    "recent_topics": [
+      "Beach Committee Community Survey Report",
+      "Community Center Exploration", 
+      "Survey Results",
+      "Proposed Special Tax Budget"
+    ],
+    "archives": "Meeting minutes and archives available on HSIA website"
+  }
+} 

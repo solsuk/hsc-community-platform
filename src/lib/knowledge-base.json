@@ -1,0 +1,162 @@
+{
+  "faqs": [
+    {
+      "question": "How do I post a listing?",
+      "answer": "Click the 'POST!' button on the main page, fill out the form with your item details, and submit. You'll need to be logged in first."
+    },
+    {
+      "question": "How do I log in?",
+      "answer": "Enter your email address and we'll send you a magic link. Click the link to log in instantly. No passwords needed!"
+    },
+    {
+      "question": "What's the difference between public and private listings?",
+      "answer": "Public listings are visible to everyone. Private listings are only visible to verified community members. Choose based on your comfort level."
+    },
+    {
+      "question": "How long do listings stay active?",
+      "answer": "Listings stay active until you remove them. We recommend updating or removing sold items to keep the board current."
+    },
+    {
+      "question": "Can I edit my listing after posting?",
+      "answer": "Yes! If you own the listing, you'll see an 'Edit?' button on your listing tiles. Click it to modify details, mark as sold, or remove the listing."
+    },
+    {
+      "question": "Who can see my contact information?",
+      "answer": "Only your email is stored, and it's never displayed publicly. People contact you through the listing interface."
+    },
+    {
+      "question": "What is HSIA?",
+      "answer": "HSIA stands for Hillsmere Shores Improvement Association, the community organization that manages our neighborhood amenities, rules, and governance. They oversee the beach, marina, pool, and community guidelines."
+    },
+    {
+      "question": "Do I need HSIA membership to use HSC?", 
+      "answer": "No, HSC (Hillsmere Shores Classifieds) is open to all residents and community members. However, HSIA membership provides access to community amenities like the beach, pool, and marina."
+    },
+    {
+      "question": "Where is Hillsmere Shores located?",
+      "answer": "Hillsmere Shores is located 3 miles southwest of historic downtown Annapolis, Maryland, nestled between Duvall Creek and Quiet Waters Park. It's a waterfront community with approximately 1,200 homes."
+    },
+    {
+      "question": "What amenities does our community have?",
+      "answer": "Hillsmere Shores offers a private marina with direct South River access, sandy beach with waterfront pavilions, community pool, multiple playgrounds, and mature tree-lined streets. We're within walking distance of Quiet Waters Park and local schools."
+    },
+    {
+      "question": "Are pets allowed in the community?",
+      "answer": "Yes, but all dogs and cats must be on a leash at all times throughout the community, including the marina, pool grounds, and all streets. This is enforced by Anne Arundel County Law with fines from $50-$1,000 for violations."
+    },
+    {
+      "question": "How do I report unleashed pets?",
+      "answer": "Call Anne Arundel County Animal Control at 410-222-8900 or fill out an Affidavit Complaint Form. The leash law applies throughout our community for safety."
+    },
+    {
+      "question": "Do I need permits for home modifications?", 
+      "answer": "Yes, HSIA Building Permits are required for community modifications before beginning any work. This is separate from county permits and helps maintain community standards."
+    },
+    {
+      "question": "When are HSIA board meetings?",
+      "answer": "HSIA holds monthly Board Meetings at 7:00 PM, plus a General Membership Meeting typically in September. Check the HSIA website at hillsmereshores.org for current schedules and locations."
+    },
+    {
+      "question": "How do I join the community pool?",
+      "answer": "You need 2025 Pool Membership - check the HSIA website for membership forms and requirements. The pool also has specific rules and a calendar of activities, plus a Swim Team program."
+    },
+    {
+      "question": "How do I get a marina slip?",
+      "answer": "Contact HSIA about Slip Assignments. You'll need a Vessel Ownership Affidavit and must follow Marina Rules & Regulations. There are also specific rules for boat parks and kayak/dinghy racks."
+    },
+    {
+      "question": "What is The Sea Breeze?",
+      "answer": "The Sea Breeze is our community newsletter that provides updates on HSIA activities, community news, and important announcements. It's available online and covers local community matters."
+    },
+    {
+      "question": "How can I stay updated on community events?",
+      "answer": "Sign up for the HSIA email list (membership not required) and follow the official Facebook page 'Hillsmere Shores Improvement Association'. Check hillsmereshores.org for the latest news and calendar."
+    },
+    {
+      "question": "What's the history of our community?",
+      "answer": "Originally 'Hilsmere Farm' (a gentleman's farm in the early 1900s), it was purchased by the Smith Brothers and developed between 1952-59. Some original estate buildings were incorporated into the Key School campus, including the dairy barn and Manor House."
+    },
+    {
+      "question": "Can I create business advertisements?",
+      "answer": "Yes! Use the 'POST!' button and select 'Advertise' to create professional business advertisements with images, contact info, and special features like QR coupons and business hours."
+    }
+  ],
+  "community_info": {
+    "organization": {
+      "name": "Hillsmere Shores Improvement Association (HSIA)",
+      "website": "https://hillsmereshores.org",
+      "location": "Annapolis, Maryland",
+      "established": "1952-1959",
+      "population": "Approximately 1,200 homes"
+    },
+    "amenities": {
+      "beach": "Sandy beach with waterfront pavilions and community access",
+      "marina": "Private marina with direct access to South River",
+      "pool": "Community pool with swim team and membership required",
+      "recreation": "Multiple playgrounds, waterfront pavilions, walking access to Quiet Waters Park",
+      "natural": "Mature trees, cypress-lined Hillsmere Drive, wooded community setting"
+    },
+    "governance": {
+      "meetings": "Monthly HSIA Board Meetings at 7:00 PM",
+      "committees": ["Beach Committee", "Piers & Harbors Committee", "HSIA Board of Directors"],
+      "documents": "Covenants, Bylaws, Charter, Building Permits - all available on HSIA website"
+    },
+    "rules_regulations": {
+      "pets": "Leash law enforced throughout community - $50-$1,000 fines",
+      "building": "HSIA permits required before modifications",
+      "reporting": "Anne Arundel County Animal Control: 410-222-8900"
+    },
+    "communication": {
+      "newsletter": "The Sea Breeze community newsletter", 
+      "facebook": "Official page: Hillsmere Shores Improvement Association",
+      "email_list": "HSIA email updates (membership not required)"
+    }
+  },
+  "listing_tips": [
+    {
+      "category": "Photos",
+      "tips": [
+        "Use bright, clear photos - natural lighting works best",
+        "Take multiple angles to show the item completely",
+        "Clean the item before photographing",
+        "Include size references (coins, rulers) for small items"
+      ]
+    },
+    {
+      "category": "Descriptions",
+      "tips": [
+        "Be honest about condition - it builds trust",
+        "Include dimensions, brand, model if applicable",
+        "Mention any flaws or wear upfront",
+        "Use descriptive words that help buyers visualize"
+      ]
+    },
+    {
+      "category": "Pricing",
+      "tips": [
+        "Research similar items online for fair pricing",
+        "Consider the item's age and condition",
+        "Price slightly high to leave room for negotiation",
+        "Update price if item doesn't sell within a week"
+      ]
+    },
+    {
+      "category": "Business Ads",
+      "tips": [
+        "Use high-quality business photos - logo, storefront, products",
+        "Include clear contact information and business hours",
+        "Add QR coupons to attract customers",
+        "Choose appropriate business type for specialized features",
+        "Keep descriptions professional but engaging"
+      ]
+    }
+  ],
+  "contact_info": {
+    "hsc_support": "Use the chat feature for HSC website questions and technical support",
+    "community_questions": "Contact HSIA through hillsmereshores.org for community-related questions",
+    "emergency_contacts": {
+      "animal_control": "Anne Arundel County Animal Control: 410-222-8900",
+      "hsia_general": "Check hillsmereshores.org for current HSIA contact information"
+    }
+  }
+} 

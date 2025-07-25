@@ -1,0 +1,48 @@
+{
+  "categories": {
+    "hoa": {
+      "name": "HSIA & Governance", 
+      "description": "Hillsmere Shores Improvement Association bylaws, meeting minutes, board information, covenants and rules",
+      "keywords": ["hsia", "hoa", "board", "bylaws", "governance", "association", "meetings", "minutes", "covenants", "rules", "hillsmere shores"],
+      "documents": ["hsia_community_info.json"]
+    },
+    "codes-ordinances": {
+      "name": "Codes & Ordinances",
+      "description": "Building codes, zoning variances, permits, local ordinances",
+      "keywords": ["building", "permit", "zoning", "variance", "code", "ordinance", "construction"],
+      "documents": []
+    },
+    "services": {
+      "name": "Community Services",
+      "description": "Utilities, trash pickup, maintenance, contractor recommendations",
+      "keywords": ["utilities", "trash", "recycling", "maintenance", "contractor", "service"],
+      "documents": []
+    },
+    "emergency": {
+      "name": "Emergency Information",
+      "description": "Emergency contacts, procedures, safety information, Anne Arundel County services",
+      "keywords": ["emergency", "safety", "contact", "phone", "police", "fire", "medical", "animal control", "anne arundel county"],
+      "documents": ["anne_arundel_contacts.json"]
+    },
+    "forms": {
+      "name": "Forms & Applications",
+      "description": "Community forms, applications, request forms",
+      "keywords": ["form", "application", "request", "submit", "apply"],
+      "documents": []
+    },
+    "meetings": {
+      "name": "Meeting Documents",
+      "description": "Meeting agendas, minutes, announcements",
+      "keywords": ["meeting", "agenda", "minutes", "announcement", "schedule"],
+      "documents": []
+    },
+    "announcements": {
+      "name": "Community Announcements",
+      "description": "General community announcements, newsletters, updates, The Sea Breeze newsletter",
+      "keywords": ["announcement", "newsletter", "update", "news", "community", "sea breeze", "hsia events"],
+      "documents": ["sea_breeze_info.json"]
+    }
+  },
+  "last_updated": "2025-01-19T00:00:00.000Z",
+  "total_documents": 3
+} 

@@ -1,0 +1,118 @@
+{
+  "organization": {
+    "name": "Hillsmere Shores Improvement Association (HSIA)",
+    "abbreviation": "HSIA", 
+    "location": "Annapolis, Maryland",
+    "description": "Located 3 miles southwest of historic downtown Annapolis, Maryland. Nestled between Duvall Creek and Quiet Waters Park, Hillsmere Shores is a quiet, waterfront community with approximately 1,200 homes.",
+    "established": "1952-1959",
+    "website": "https://hillsmereshores.org"
+  },
+  "governance": {
+    "board_meetings": {
+      "schedule": "Monthly HSIA Board Meetings at 7:00 PM",
+      "location": "Community meetings - check HSIA website for details",
+      "general_membership": "HSIA General Membership Meeting - typically September"
+    },
+    "documents": {
+      "covenants": "HSIA Covenants & Rules",
+      "bylaws": "HSIA Bylaws & Charter", 
+      "building_permits": "HSIA Building Permits required for modifications",
+      "description": "All major documents available on hillsmereshores.org"
+    },
+    "committees": [
+      "HSIA Board of Directors",
+      "Beach Committee", 
+      "Piers & Harbors Committee",
+      "Various HSIA Committees"
+    ]
+  },
+  "community_amenities": {
+    "beach": {
+      "description": "Sandy beach with waterfront pavilions",
+      "access": "Community beach access",
+      "calendar": "Beach Calendar available on website"
+    },
+    "marina": {
+      "description": "Private marina with direct access to the South River",
+      "rules": "Marina Rules & Regulations",
+      "features": [
+        "Vessel Ownership Affidavit required",
+        "Slip Assignments available",
+        "Boat Park Rules & Regulations",
+        "Kayak/Dinghy Rack Rules & Regulations",
+        "Living Shoreline at the Sand Spit"
+      ]
+    },
+    "pool": {
+      "description": "Community pool facility",
+      "membership": "2025 Pool Membership required",
+      "rules": "2025 Pool Rules",
+      "programs": "Swim Team available",
+      "calendar": "Pool Calendar on website"
+    },
+    "other_amenities": [
+      "Multiple playgrounds",
+      "Waterfront pavilions", 
+      "Mature trees including cypress trees along Hillsmere Drive"
+    ]
+  },
+  "community_rules": {
+    "pets": {
+      "leash_law": "All dogs/cats must be on a leash at all times in the community",
+      "applies_to": "Marina, pool grounds, surrounding open field, and all streets",
+      "county_law": "Anne Arundel County Law enforced",
+      "penalties": "Fines from $50 to $1,000 for violations",
+      "reporting": "Call Anne Arundel County Animal Control 410-222-8900"
+    },
+    "building_permits": {
+      "requirement": "HSIA Building Permits required for community modifications",
+      "process": "Must obtain permits through HSIA before beginning work"
+    }
+  },
+  "location_details": {
+    "address": "Hillsmere Shores, Annapolis, MD",
+    "proximity": {
+      "downtown_annapolis": "3 miles southwest",
+      "nearby_facilities": [
+        "Quiet Waters Park (walking distance)",
+        "Eastport-Annapolis library branch",
+        "Hillsmere Elementary School", 
+        "PAL Park",
+        "Bay Ridge Plaza shopping center",
+        "Key School campus (includes original estate buildings)"
+      ]
+    },
+    "natural_features": [
+      "Located between Duvall Creek and Quiet Waters Park",
+      "Direct access to South River",
+      "Wooded community with mature trees",
+      "Original cypress trees along main road"
+    ]
+  },
+  "history": {
+    "original_name": "Hilsmere Farm (second 'l' added later)",
+    "development": "Purchased by Smith Brothers and developed 1952-59", 
+    "historical_buildings": "Original estate buildings incorporated into Key School campus including dairy barn and Manor House",
+    "description": "Originally a gentleman's farm in early 1900s"
+  },
+  "community_communication": {
+    "newsletter": "The Sea Breeze - community newsletter",
+    "facebook": "Official Facebook: 'Hillsmere Shores Improvement Association'",
+    "email_list": "HSIA email list for important events and issues (membership not required)",
+    "website_note": "HSIA does not sponsor other social media platforms beyond official Facebook"
+  },
+  "clubs_organizations": {
+    "garden_club": "Garden Club available for residents",
+    "membership": "Join HSIA - membership forms available"
+  },
+  "frequently_asked_topics": [
+    "Building permits and modifications",
+    "Trash collection schedules", 
+    "Snow removal procedures",
+    "Beach access and rules",
+    "Pool membership and rules",
+    "Marina slip assignments and regulations",
+    "Pet policies and leash laws",
+    "Community meeting schedules"
+  ]
+} 
