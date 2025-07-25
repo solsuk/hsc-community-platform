@@ -18,8 +18,8 @@ export default function AdminTestPage() {
       user: user ? {
         id: user.id,
         email: user.email,
-        is_admin: user.is_admin,
-        community_verified: user.community_verified
+        isAdmin: user.isAdmin,
+        communityVerified: user.communityVerified
       } : null,
       timestamp: new Date().toISOString()
     });
@@ -58,13 +58,13 @@ export default function AdminTestPage() {
             </div>
           )}
           
-          {!loading && authenticated && !user?.is_admin && (
+          {!loading && authenticated && !user?.isAdmin && (
             <div className="text-orange-600">
               ⚠️ Authenticated but not admin - Run SQL: UPDATE users SET is_admin = TRUE WHERE email = '{user?.email}';
             </div>
           )}
           
-          {!loading && authenticated && user?.is_admin && (
+          {!loading && authenticated && user?.isAdmin && (
             <div className="text-green-600">
               ✅ Admin access confirmed! You should be able to access /admin
             </div>

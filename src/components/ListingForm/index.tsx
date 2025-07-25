@@ -7,7 +7,7 @@ import RichTextEditor from '../RichTextEditor';
 interface Listing {
   id: string;
   user_id: string;
-  type: 'sell' | 'trade' | 'announce' | 'wanted';
+  type: 'sell' | 'trade' | 'announce' | 'advertise' | 'wanted';
   title: string;
   basic_description: string;
   detailed_description: string;
@@ -24,7 +24,7 @@ interface Listing {
 interface ListingFormProps {
   isOpen: boolean;
   onClose: () => void;
-  initialType?: 'sell' | 'trade' | 'announce' | 'wanted' | null;
+  initialType?: 'sell' | 'trade' | 'announce' | 'advertise' | 'wanted' | null;
   editingListing?: Listing | null;
   onListingUpdated?: (listing: Listing) => void;
 }

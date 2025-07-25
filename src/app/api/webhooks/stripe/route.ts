@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import Stripe from 'stripe'
-import { createServerClient } from '@/lib/supabase'
+import { createServerSupabaseClient } from '@/lib/supabase'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-06-20',
+  apiVersion: '2025-06-30.basil',
 })
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Initialize Supabase client
-  const supabase = createServerClient()
+  const supabase = createServerSupabaseClient()
 
   try {
     switch (event.type) {
@@ -113,10 +113,10 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session, supabas
 }
 
 async function handleSubscriptionPayment(invoice: Stripe.Invoice, supabase: any) {
-  console.log('🔄 Subscription payment succeeded for:', invoice.subscription)
+  console.log('🔄 Subscription payment succeeded for:', (invoice as any).subscription)
   
   // Handle auto-renewal - extend ad placement for another week
-  const subscriptionId = invoice.subscription as string
+  const subscriptionId = (invoice as any).subscription as string
   
   // Find the ad payment record
   const { data: payment } = await supabase
@@ -140,10 +140,10 @@ async function handleSubscriptionPayment(invoice: Stripe.Invoice, supabase: any)
 }
 
 async function handlePaymentFailed(invoice: Stripe.Invoice, supabase: any) {
-  console.log('❌ Payment failed for subscription:', invoice.subscription)
+  console.log('❌ Payment failed for subscription:', (invoice as any).subscription)
   
   // Deactivate the ad if payment fails
-  const subscriptionId = invoice.subscription as string
+  const subscriptionId = (invoice as any).subscription as string
   
   const { data: payment } = await supabase
     .from('ad_payments')

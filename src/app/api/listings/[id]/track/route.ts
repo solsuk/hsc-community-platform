@@ -35,7 +35,7 @@ export async function POST(
     }
 
     // Get user info (optional - tracking works for anonymous users too)
-    const authResult = await validateAuth(request, false);
+    const authResult = await validateAuth(request);
     
     // Get request metadata
     const userAgent = request.headers.get('user-agent') || 'unknown';
@@ -183,7 +183,7 @@ export async function GET(
   try {
     // Validate admin authentication for viewing tracking data
     const authResult = await validateAuth(request);
-    if (!authResult.success || !authResult.user?.is_admin) {
+    if (!authResult.success || !authResult.user?.isAdmin) {
       return NextResponse.json({ 
         error: 'Admin access required' 
       }, { status: 403 });
@@ -243,26 +243,26 @@ export async function GET(
     }
 
     // Process analytics data
-    const eventCounts = (allEventsResult.data || []).reduce((acc, event) => {
+    const eventCounts = (Array.isArray(allEventsResult.data) ? allEventsResult.data : []).reduce((acc: Record<string, number>, event: any) => {
       acc[event.event_type] = (acc[event.event_type] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
 
-    const deviceBreakdown = (deviceDataResult.data || []).reduce((acc, event) => {
+    const deviceBreakdown = (Array.isArray(deviceDataResult.data) ? deviceDataResult.data : []).reduce((acc: Record<string, number>, event: any) => {
       acc[event.device_type] = (acc[event.device_type] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
 
-    const browserBreakdown = (deviceDataResult.data || []).reduce((acc, event) => {
+    const browserBreakdown = (Array.isArray(deviceDataResult.data) ? deviceDataResult.data : []).reduce((acc: Record<string, number>, event: any) => {
       acc[event.browser_name] = (acc[event.browser_name] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
 
-    const uniqueUserCount = uniqueUsersResult.data ? 
-      new Set(uniqueUsersResult.data.map(row => row.user_id)).size : 0;
+    const uniqueUserCount = (Array.isArray(uniqueUsersResult.data) && uniqueUsersResult.data.length > 0) ? 
+      new Set(uniqueUsersResult.data.map((row: any) => row.user_id)).size : 0;
 
     // Daily breakdown for chart
-    const dailyBreakdown = (recentEventsResult.data || []).reduce((acc, event) => {
+    const dailyBreakdown = (Array.isArray(recentEventsResult.data) ? recentEventsResult.data : []).reduce((acc: Record<string, { clicks: number; views: number; other: number }>, event: any) => {
       const date = event.event_timestamp.split('T')[0];
       if (!acc[date]) {
         acc[date] = { clicks: 0, views: 0, other: 0 };
@@ -281,11 +281,11 @@ export async function GET(
       success: true,
       listing: {
         id: listingId,
-        title: listingResult.data.title,
-        clicks: listingResult.data.clicks,
-        impression_count: listingResult.data.impression_count,
-        engagement_score: listingResult.data.engagement_score,
-        created_at: listingResult.data.created_at
+        title: (listingResult.data as any)?.title || 'Unknown',
+        clicks: (listingResult.data as any)?.clicks || 0,
+        impression_count: (listingResult.data as any)?.impression_count || 0,
+        engagement_score: (listingResult.data as any)?.engagement_score || 0,
+        created_at: (listingResult.data as any)?.created_at || new Date().toISOString()
       },
       analytics: {
         event_counts: eventCounts,
@@ -293,7 +293,7 @@ export async function GET(
         device_breakdown: deviceBreakdown,
         browser_breakdown: browserBreakdown,
         daily_breakdown: dailyBreakdown,
-        total_events: allEventsResult.data?.length || 0
+        total_events: Array.isArray(allEventsResult.data) ? allEventsResult.data.length : 0
       }
     });
 

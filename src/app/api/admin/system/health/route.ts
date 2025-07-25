@@ -108,8 +108,8 @@ export async function GET(request: NextRequest) {
           .rpc('get_table_count')
           .single();
         
-        if (tablesData?.count) {
-          tableCount = tablesData.count;
+        if (tablesData && typeof tablesData === 'object' && 'count' in tablesData) {
+          tableCount = (tablesData as any).count;
         }
       } catch (tableCountError) {
         // Estimate table count based on what we know exists

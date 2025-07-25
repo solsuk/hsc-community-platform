@@ -181,7 +181,13 @@ export async function POST(request: NextRequest) {
           new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
           15,
           30,
-          config
+          { 
+            weight_age: 0.6, 
+            weight_clicks: 0.4, 
+            max_age_hours: 168, 
+            boost_premium: true, 
+            engagement_threshold: 5 
+          }
         ),
         position_change: 'same'
       }

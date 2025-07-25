@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { cookies } from 'next/headers';
 import { createServerSupabaseClient, createAdminSupabaseClient } from '@/lib/supabase';
 import { validateAuth } from '@/lib/auth';
 
